@@ -1,6 +1,51 @@
 .me_01{
-    position: relative;
+    height: 50%;
+    width: 50%;
+    float: left;
     flex: auto;
-    height: 20%;
-    width: 20%;
+    margin-top: -60px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.icons_dev{
+    height: 150px;
+    border: 1px black solid;
+    position:absolute;
+}
+
+.javaCss{
+    float: left;
+    flex: auto;
+    padding-top: 100px;
+}
+
+.mysqlCss{
+    float: left;
+    flex: auto;
+    padding-top: 60px;
+}
+
+.reactCss{
+    float: left;
+    flex: auto;
+    padding-top: 10px;
+}
+
+.githubCss{
+    float: left;
+    flex: auto;
+    padding-top: 60px;
+}
+
+.dockerCss{
+    float: left;
+    flex: auto;
+    padding-top: 100px;
+}
+
+.meAndIcons{
+    position:relative; 
+    border:1px solid #000; 
+    width:500px; height:400px
 }
