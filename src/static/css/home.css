@@ -47,5 +47,7 @@
 .meAndIcons{
     position:relative; 
     border:1px solid #000; 
-    width:500px; height:400px
+    width:500px; 
+    height:400px;
+    margin-top: 1000px;
 }
