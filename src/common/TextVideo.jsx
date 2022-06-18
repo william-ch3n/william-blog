@@ -8,7 +8,7 @@ export default function TextVideo() {
     <fragment>
       <div className="textVideoDiv">
         <video className="videoOcean" controls autoPlay muted loop preload src={ocean} type="video/mp4" />
-        <h1 className="textVideo-text">william chen</h1>
+        <h1 className="textVideo-text">william ch3n</h1>
       </div>
     </fragment>
   )

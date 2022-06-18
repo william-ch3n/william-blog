@@ -57,10 +57,10 @@
   .videoOcean {
     object-fit: cover;
     position: absolute;
-    top: 35vh;
+    top: 40vh;
     left: 0;
     width: 100%;
-    max-height: 30vh;
+    max-height: 20vh;
     height: 100%;
   }
   
