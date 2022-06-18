@@ -18,13 +18,23 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Header from '../../common/Header'
 import MeAndIcons from '../../common/MeAndIcons'
+import { Grid } from '@mui/material'
 
 export default function Home() {
   return (
     <div>
+    <Header />
+    <Grid container spacing={2} direction="column">
+      <Grid item xs={12} container>
+      <Grid item xs={1} sx={{position: "fixed", background:"none", zIndex:1}}>grid 1</Grid>
+      <Grid item xs={10}>
+        
+        <TextVideo />
+        <MeAndIcons />
+      </Grid>
 
 
-      <Header />
+        {/* <Header />
 
       <div>
         <Button variant="contained">hello world</Button>
@@ -33,8 +43,10 @@ export default function Home() {
 
       <div>
         <MeAndIcons />
-      </div>
+      </div> */}
 
+</Grid>
+      </Grid>
     </div>
   )
 }

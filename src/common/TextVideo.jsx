@@ -1,12 +1,15 @@
 import React from 'react'
 import '../static/css/textVideo.css'
 import ocean from '../static/video/ocean-small.mp4'
+import { Grid } from '@mui/material'
 
 export default function TextVideo() {
-    return (
-        <div>
-            <video controls autoPlay muted loop preload src={ocean} type="video/mp4" />
-            <h1>william chen</h1>
-        </div>
-    )
+  return (
+    <fragment>
+      <div className="textVideoDiv">
+        <video className="videoOcean" controls autoPlay muted loop preload src={ocean} type="video/mp4" />
+        <h1 className="textVideo-text">william chen</h1>
+      </div>
+    </fragment>
+  )
 }
