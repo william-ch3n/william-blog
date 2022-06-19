@@ -20,6 +20,7 @@ export const AUTO_TEXT = {
         "open to new chance.",
         "¯\\_(ツ)_/¯",
         "interested in video games",
+        "a big Apple fan.",
         "thinking of new words."
     ]
 }
