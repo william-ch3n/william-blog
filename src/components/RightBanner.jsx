@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import '../static/css/rightBanner.scss'
 
 export default function RightBanner() {
@@ -9,8 +9,8 @@ export default function RightBanner() {
 
 
   return (
-    <fragment>
+    <Fragment>
       <span className="dot-ripple" onClick={clickDot}/>
-    </fragment>
+    </Fragment>
   )
 }

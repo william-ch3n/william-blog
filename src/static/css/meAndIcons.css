@@ -1,0 +1,104 @@
+.me_01{
+  height: auto;
+  width: 35%;
+  position: relative;
+  top: 35vh;
+  left: 60vw;
+}
+
+.javaCss{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 50vh;
+  left: 57vw;
+}
+
+.mysqlCss{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 40vh;
+  left: 58.5vw;
+}
+
+.reactCss{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 30vh;
+  left: 61.5vw;
+}
+
+.githubCss{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 40vh;
+  left: 64.5vw;
+}
+
+.dockerCss{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 50vh;
+  left: 67.5vw;
+}
+
+.css3Css{
+  width: 6%;
+  height: auto;
+  position: relative;
+  top: 50vh;
+  left: 67.5vw;
+}
+
+.pre-text{
+  position:relative;
+  font-size: 5vw;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  top: 100vh;
+  left: 6.5vw;
+  cursor: default;
+}
+
+.auto-text{
+  position:relative;
+  font-size: 5vw;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  top: 100vh;
+  left: 6.5vw;
+  cursor: default;
+}
+
+/* customize the defined css*/
+.typed-cursor {
+  position:relative;
+  font-size: 5vw;
+  top: 100vh;
+  left: 6.5vw;
+}
+
+.pre-auto-text{
+  position:relative;
+  font-size: 8vw;
+  font-weight: bold;
+  font-family: Arial Black;
+  top: 100vh;
+  left: 6.5vw;
+  cursor: default;
+}
+
+.post-auto-text{
+  position:relative;
+  font-size: 8vw;
+  font-weight: bold;
+  font-family: Arial Black;
+  top: 105vh;
+  left: 47.5vw;
+  cursor: default;
+}
+

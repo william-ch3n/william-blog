@@ -8,3 +8,18 @@ export const SNS_URL = {
 export const GREETINGS = {
     WORDS : ["☺️","🤨","🤓","😶‍🌫️","🤩","😵","🤯","🤣","💩","🖖","😇","🤔","🤪","😎","👾","🥵","😆","😅","😂","🙃","😋","👨‍💻","🐶","🏀","🔥","🍀","🤞"]
 }
+
+export const AUTO_TEXT = {
+    STRINGS: [
+        "William Ch3n.",
+        "full stack engineer.",
+        "greeting you.",
+        "enjoying coding.",
+        "playing Basketball.",
+        "living in Tokyo.",
+        "open to new chance.",
+        "¯\\_(ツ)_/¯",
+        "interested in video games",
+        "thinking of new words."
+    ]
+}

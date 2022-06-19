@@ -3,7 +3,6 @@
     height: 75%;
     border-radius: 50%;
     position: relative;
-    /* margin-left: 100%; */
 }
 
 .avatar:hover{
@@ -29,7 +28,7 @@
     margin-top: 75%;
     font-size: 200%;
     padding-left: 10%;
-    animation: fadeout-anim 2.5s linear forwards;
+    animation: fadeout-anim 2s linear forwards;
 }
 
 @keyframes fadeout-anim {
@@ -38,9 +37,6 @@
 	}
 }
 
-.navbar{
-    
-}
 
 .scolling-active .navbar{
     background-color: black;
