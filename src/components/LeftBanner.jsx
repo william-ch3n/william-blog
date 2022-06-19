@@ -24,10 +24,6 @@ export default function LeftBanner() {
 
   return (
     <fragment>
-      {/* <img src={twitter} alt="" className="SnsIconsSvg" onClick={clickTwitter}/><br />
-      <img src={facebook} alt="" className="SnsIconsSvg" onClick={clickFacebook}/><br />
-      <img src={instagram} alt="" className="SnsIconsSvg" onClick={clickInstagram}/>
-      <img src={github} alt="" className="SnsIconsSvg" /> */}
 
       <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" className="SnsIconsSvg" onClick={clickTwitter}>
         <defs>

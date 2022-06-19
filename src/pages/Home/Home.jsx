@@ -18,37 +18,33 @@ import Header from '../../components/Header'
 import MeAndIcons from '../../components/MeAndIcons'
 import { Grid } from '@mui/material'
 import LeftBanner from '../../components/LeftBanner';
+import RightBanner from '../../components/RightBanner';
 
 export default function Home() {
   return (
     <div>
-      
-    <Header />
-    
-    <Grid container spacing={2} direction="column">
-      <Grid item xs={12} container>
-      <Grid item xs={1} sx={{position: "fixed", background:"none", zIndex:1}}>
-        <LeftBanner />  
-      </Grid>
-      <Grid item xs={10}>
-        
-        <TextVideo />
-        <MeAndIcons />
-      </Grid>
 
 
-        {/* <Header />
 
-      <div>
-        <Button variant="contained">hello world</Button>
-      </div>
+      <Header />
 
+      <Grid container spacing={2} direction="column">
+        <Grid item xs={12} container>
 
-      <div>
-        <MeAndIcons />
-      </div> */}
+          <Grid item xs={1} sx={{ position: "fixed", background: "none", zIndex: 1 }}>
+            <LeftBanner />
+          </Grid>
 
-</Grid>
+          <Grid item xs={10}>
+            <TextVideo />
+            <MeAndIcons />
+          </Grid>
+
+          <Grid item xs={1} sx={{ position: "fixed", background: "none", zIndex: 1 }}>
+            <RightBanner />
+          </Grid>
+
+        </Grid>
       </Grid>
     </div>
   )
