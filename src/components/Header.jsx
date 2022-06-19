@@ -7,6 +7,7 @@ import avatar from '../static/img/avator.jpg'
 import '../static/css/header.css'
 import { css } from '@emotion/react';
 import { styled } from '@mui/material/styles';
+import { GREETINGS } from '../common/constants/allConstants';
 
 export default function Header() {
 
@@ -16,9 +17,6 @@ export default function Header() {
 
 	const [wordCss, setWordCss] = useState("wordBox");
 
-	const words = ["☺️","🤨","🤓","😶‍🌫️","🤩","😵","🤯","🤣","💩","🖖","😇","🤔","🤪","😎","👾","🥵","😆","😅","😂","🙃","😋","👨‍💻","🐶","🏀","🔥","🍀","🤞"]; 
-
-
 	const wordRef = useRef();
 
 	const handleChange = (event, newValue) => {
@@ -26,8 +24,8 @@ export default function Header() {
 	}
 
 	const onClick = () => {
-		let index = Math.floor(Math.random()*words.length);
-		setWord(words[index]+words[index]+words[index]);
+		let index = Math.floor(Math.random()*GREETINGS.WORDS.length);
+		setWord(GREETINGS.WORDS[index]+GREETINGS.WORDS[index]+GREETINGS.WORDS[index]);
 		setWordCss("wordBox");
 		setTimeout(()=>{
 			setWordCss("wordBox-fadeOut");

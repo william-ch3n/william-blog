@@ -29,7 +29,7 @@
     margin-top: 75%;
     font-size: 200%;
     padding-left: 10%;
-    animation: fadeout-anim 2s linear forwards;
+    animation: fadeout-anim 2.5s linear forwards;
 }
 
 @keyframes fadeout-anim {
