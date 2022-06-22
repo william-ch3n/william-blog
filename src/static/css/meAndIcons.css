@@ -1,76 +1,68 @@
 .me_01{
   height: auto;
-  width: 35%;
-  position: relative;
-  top: 35vh;
-  left: 60vw;
+  width: 33.3%;
+  position: absolute;
+  top: 20vh;
+  right: 10vw;
 }
 
 .javaCss{
-  width: 6%;
+  width: 5%;
   height: auto;
-  position: relative;
-  top: 50vh;
-  left: 57vw;
+  position: absolute;
+  top: 25vh;
+  right: 40vw;
 }
 
 .mysqlCss{
-  width: 6%;
+  width: 5%;
   height: auto;
-  position: relative;
-  top: 40vh;
-  left: 58.5vw;
+  position: absolute;
+  top: 15vh;
+  right: 33vw;
 }
 
 .reactCss{
-  width: 6%;
+  width: 5%;
   height: auto;
-  position: relative;
-  top: 30vh;
-  left: 61.5vw;
+  position: absolute;
+  top: 5vh;
+  right: 24vw;
 }
 
 .githubCss{
-  width: 6%;
+  width: 5%;
   height: auto;
-  position: relative;
-  top: 40vh;
-  left: 64.5vw;
-}
-
-.dockerCss{
-  width: 6%;
-  height: auto;
-  position: relative;
-  top: 50vh;
-  left: 67.5vw;
+  position: absolute;
+  top: 15vh;
+  right: 15vw;
 }
 
 .css3Css{
-  width: 6%;
+  width: 5%;
   height: auto;
-  position: relative;
-  top: 50vh;
-  left: 67.5vw;
+  position: absolute;
+  top: 25vh;
+  right: 7vw;
 }
 
 .pre-text{
-  position:relative;
-  font-size: 5vw;
+  position:absolute;
+  font-size: 4.5vw;
   font-weight: bold;
   font-family: Comic Sans MS;
-  top: 100vh;
-  left: 6.5vw;
+  top: 35vh;
+  left: 8vw;
   cursor: default;
 }
 
 .auto-text{
   position:relative;
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-weight: bold;
   font-family: Comic Sans MS;
-  top: 100vh;
-  left: 6.5vw;
+  top: 50vh;
+  left: 8vw;
   cursor: default;
 }
 
@@ -78,16 +70,16 @@
 .typed-cursor {
   position:relative;
   font-size: 5vw;
-  top: 100vh;
-  left: 6.5vw;
+  top: 50vh;
+  left: 8vw;
 }
 
 .pre-auto-text{
-  position:relative;
+  position:absolute;
   font-size: 8vw;
   font-weight: bold;
   font-family: Arial Black;
-  top: 100vh;
+  top: 15vh;
   left: 6.5vw;
   cursor: default;
 }
@@ -97,8 +89,38 @@
   font-size: 8vw;
   font-weight: bold;
   font-family: Arial Black;
-  top: 105vh;
+  top: 55vh;
   left: 47.5vw;
   cursor: default;
 }
 
+
+.pre-text {
+	position: absolute;
+}
+
+.pre-text:before {
+	position: absolute;
+	content: '';
+	z-index: -1;
+	top: -2px;
+	left: -5px;
+	right: -5px;
+	bottom: -2px;
+	background-color: #7eec99;
+	transform-origin: 0;
+	transition: transform 3s ease;
+	transform: scaleX(0);
+}
+
+.in-view .pre-text:before {
+	transform: scaleX(1);
+}
+
+
+.meAndIconsDiv{
+  border: 10px solid blue;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
