@@ -54,6 +54,7 @@
         border-radius: 50%;
         position: relative;
         top: 6vh;
+        left: -7vw;
     }
 
     .wordBox{
@@ -61,7 +62,7 @@
         position: relative;
         top: 7vh;
         font-size: 3vw;
-        padding-left: 3vw;
+        padding-left: 0vw;
     }
     
     .wordBox-fadeOut{
@@ -69,7 +70,7 @@
         position: relative;
         top: 7vh;
         font-size: 3vw;
-        padding-left: 3vw;
+        padding-left: 0vw;
         animation: fadeout-anim 2s linear forwards;
     }
 }

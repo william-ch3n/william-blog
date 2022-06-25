@@ -12,15 +12,17 @@ export const GREETINGS = {
 export const AUTO_TEXT = {
     STRINGS: [
         "William Ch3n.",
-        "full stack engineer.",
-        "greeting you.",
+        "recommending PC access.",
+        "a full stack engineer.",
+        "greeting you!",
         "enjoying coding.",
+        "dreaming of my own biz.",
         "playing Basketball.",
         "living in Tokyo.",
         "open to new chance.",
         "¯\\_(ツ)_/¯",
         "interested in video games",
-        "a big Apple fan.",
+        "a big Apple fan!",
         "thinking of new words."
     ]
 }

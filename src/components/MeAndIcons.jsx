@@ -13,11 +13,10 @@ import { AUTO_TEXT } from '../common/constants/allConstants'
 export default function MeAndIcons() {
 
 
-        // const wrapper = document.getElementById("highlight-effect");
-        const wrapper = useRef(null);
-        const className = "in-view";
-
-        
+  // const wrapper = document.getElementById("highlight-effect");
+  const wrapper = useRef(null);
+  const className = "in-view";
+      
 
   // Create reference to store the DOM element containing the animation
   const el = React.useRef(null);
@@ -32,8 +31,7 @@ export default function MeAndIcons() {
           wrapper.current.classList.add(className);  
           return;
         }
-
-        
+    
         wrapper.current.classList.remove(className);
         
       });
@@ -53,18 +51,8 @@ export default function MeAndIcons() {
 
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options);
-
-    console.log("check:", wrapper.current);
-
-
-
+    
     observer.observe(wrapper.current);
-
-
-
-
-
-
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
@@ -74,24 +62,17 @@ export default function MeAndIcons() {
 
 
 
-
-  
-
-
-
-
   return (
     <Fragment>
 
       <div className="meAndIconsDiv">
-      <div>
+
         <div>
           <span className="pre-auto-text">“</span>
           <br />
           <section>
             <div className="highlight-effect" ref={wrapper}>
               <span className="pre-text">I'm </span>
-              {/* <span class="highlight"> for free!</span> */}
             </div>
           </section>
           <br />
@@ -99,8 +80,8 @@ export default function MeAndIcons() {
           <br />
           <span className="post-auto-text">”</span>
         </div>
-      </div>
 
+    <div>
       <div>
         <img className="javaCss" src={java} alt="" />
         <img className="mysqlCss" src={mysql} alt="" />
@@ -112,6 +93,7 @@ export default function MeAndIcons() {
       <div>
         <img className="me_01" src={me_01} alt="" />
       </div>
+    </div>
     
     </div>
 

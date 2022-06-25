@@ -1,10 +1,10 @@
 .menu{
   cursor: pointer;
-  background-color: white;
+  background-color: inherit;
   border: 0px;
   color: none;
   position: absolute;
-  right: 4vw;
+  right: 7vw;
   top: 8vh;
 }
 
