@@ -3,31 +3,36 @@
     height: 75%;
     border-radius: 50%;
     position: relative;
+    top: 6vh;
 }
 
 .avatar:hover{
     cursor: pointer;
 }
 
-.avatarBox{
-    margin-top: 50%;
-}
+
 
 .tabBox{
-    padding-top: 7.5%;
+    position: relative;
+    top: 8vh;
     margin-right: 20%;
+    
 }
 
 .wordBox{
-    margin-top: 75%;
-    font-size: 200%;
-    padding-left: 10%;
+    width: 7vw;
+    position: relative;
+    top: 8vh;
+    font-size: 2vw;
+    padding-left: 1vw;
 }
 
 .wordBox-fadeOut{
-    margin-top: 75%;
-    font-size: 200%;
-    padding-left: 10%;
+    width: 7vw;
+    position: relative;
+    top: 8vh;
+    font-size: 2vw;
+    padding-left: 1vw;
     animation: fadeout-anim 2s linear forwards;
 }
 
@@ -38,6 +43,34 @@
 }
 
 
-.scolling-active .navbar{
-    background-color: black;
+@media screen and (max-width:720px) {
+    .tabBox{
+        display: none;
+    }
+
+    .avatar{
+        width: 120%;
+        height: 120%;
+        border-radius: 50%;
+        position: relative;
+        top: 6vh;
+    }
+
+    .wordBox{
+        width: 12vw;
+        position: relative;
+        top: 7vh;
+        font-size: 3vw;
+        padding-left: 3vw;
+    }
+    
+    .wordBox-fadeOut{
+        width: 12vw;
+        position: relative;
+        top: 7vh;
+        font-size: 3vw;
+        padding-left: 3vw;
+        animation: fadeout-anim 2s linear forwards;
+    }
 }
+

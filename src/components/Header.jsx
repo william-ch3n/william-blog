@@ -8,6 +8,7 @@ import '../static/css/header.css'
 import { css } from '@emotion/react';
 import { styled } from '@mui/material/styles';
 import { GREETINGS } from '../common/constants/allConstants';
+import SwipeableMenu from './SwipeableMenu';
 
 export default function Header() {
 
@@ -32,13 +33,10 @@ export default function Header() {
 		}, 1000);	
 	}
 
-	// document.addEventListener()
-
 
 	return (
 		<Fragment>
 
-		<div className="navbar">
 		<Grid container spacing={2} direction="column" sx={{position: "fixed", background:"none", zIndex:1}}>
 
 			<Grid item xs={12} container>
@@ -54,7 +52,7 @@ export default function Header() {
 								</Tooltip>
 							</Box>
 						</Grid>
-						<Grid item xs={1}>
+						<Grid item xs={1} className="">
 							<Box className={wordCss} ref={wordRef}>
 								{word}
 							</Box>
@@ -68,6 +66,7 @@ export default function Header() {
 									<Tab disableRipple={true} label="About" style={{minWidth:"15%"}} />
 								</Tabs>
 							</Box>
+							<SwipeableMenu />
 						</Grid>
 					</Grid>
 				</Grid>
@@ -77,7 +76,6 @@ export default function Header() {
 
 
 		</Grid>
-		</div>
 
 
 			{/* </Box> */}
