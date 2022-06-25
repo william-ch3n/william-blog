@@ -37,7 +37,7 @@ export default function Header() {
 	return (
 		<Fragment>
 
-		<Grid container spacing={2} direction="column" sx={{position: "fixed", background:"none", zIndex:1}}>
+		<Grid container spacing={2} direction="column" sx={{position: "fixed", background:"none", zIndex:1, height:"4vh"}} elevation={3}>
 
 			<Grid item xs={12} container>
 				<Grid item xs={1}></Grid>

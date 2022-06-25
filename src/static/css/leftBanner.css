@@ -15,3 +15,14 @@
     --color-stop-2: #c162f5;
     --color-stop-3: #f5976e;
 }
+
+@media screen and (max-width:720px) {
+    .SnsIconsSvg{
+        width: 25px;
+        height: 25px;
+        left: 1vw;
+        top: 88vh;
+        position: relative;
+        cursor: pointer;
+    }
+}
