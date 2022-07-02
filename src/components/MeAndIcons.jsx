@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from 'react'
+import React, { Fragment, useRef, useEffect } from 'react'
 import mysql from '../static/img/mysql.png'
 import java from '../static/img/java.png'
 import react from '../static/img/react.png'
@@ -19,9 +19,16 @@ export default function MeAndIcons() {
       
 
   // Create reference to store the DOM element containing the animation
-  const el = React.useRef(null);
+  const el = useRef(null);
   // Create reference to store the Typed instance itself
-  const typed = React.useRef(null);
+  const typed = useRef(null);
+
+  const javaRef = useRef();
+  const mysqlRef = useRef();
+  const reactRef = useRef();
+  const githubRef = useRef();
+  const cssRef = useRef();
+  const iconsRef = useRef();
 
 
   const observer = new IntersectionObserver(
@@ -29,11 +36,31 @@ export default function MeAndIcons() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           wrapper.current.classList.add(className);  
+          
+          javaRef.current.classList.remove("javaCss");
+          mysqlRef.current.classList.remove("mysqlCss");
+          reactRef.current.classList.remove("reactCss");
+          githubRef.current.classList.remove("githubCss");
+          cssRef.current.classList.remove("cssCss-active");
+          javaRef.current.classList.add("javaCss-active");
+          mysqlRef.current.classList.add("mysqlCss-active");
+          reactRef.current.classList.add("reactCss-active");
+          githubRef.current.classList.add("githubCss-active");
+          cssRef.current.classList.add("cssCss-active");
           return;
         }
     
         wrapper.current.classList.remove(className);
-        
+        javaRef.current.classList.remove("javaCss-active");
+        mysqlRef.current.classList.remove("mysqlCss-active");
+        reactRef.current.classList.remove("reactCss-active");
+        githubRef.current.classList.remove("githubCss-active");
+        cssRef.current.classList.remove("cssCss-active");
+        javaRef.current.classList.add("javaCss");
+        mysqlRef.current.classList.add("mysqlCss");
+        reactRef.current.classList.add("reactCss");
+        githubRef.current.classList.add("githubCss");
+        cssRef.current.classList.add("cssCss");
       });
     },
     {
@@ -41,7 +68,9 @@ export default function MeAndIcons() {
     }
   );
 
-  React.useEffect(() => {
+
+
+  useEffect(() => {
     const options = {
       strings: AUTO_TEXT.STRINGS,
       typeSpeed: 75,
@@ -51,8 +80,11 @@ export default function MeAndIcons() {
 
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options);
+
+    // javaRef.current = 
     
     observer.observe(wrapper.current);
+    // observer.observe(javaRef.current);
     return () => {
       // Make sure to destroy Typed instance during cleanup
       // to prevent memory leaks
@@ -71,7 +103,7 @@ export default function MeAndIcons() {
           <span className="pre-auto-text">“</span>
           <br />
           <section>
-            <div className="highlight-effect" ref={wrapper}>
+            <div className="highlight-effect" >
               <span className="pre-text">I'm </span>
             </div>
           </section>
@@ -82,12 +114,12 @@ export default function MeAndIcons() {
         </div>
 
     <div>
-      <div>
-        <img className="javaCss" src={java} alt="" />
-        <img className="mysqlCss" src={mysql} alt="" />
-        <img className="reactCss" src={react} alt="" />
-        <img className="githubCss" src={github} alt="" />
-        <img className="css3Css" src={css3} alt="" />
+      <div ref={wrapper} >
+        <img className="javaCss" src={java} alt="" ref={javaRef}/>
+        <img className="mysqlCss" src={mysql} alt="" ref={mysqlRef}/>
+        <img className="reactCss" src={react} alt="" ref={reactRef}/>
+        <img className="githubCss" src={github} alt="" ref={githubRef}/>
+        <img className="cssCss" src={css3} alt="" ref={cssRef}/>
       </div>
 
       <div>

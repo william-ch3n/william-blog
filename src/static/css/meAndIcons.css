@@ -12,7 +12,29 @@
   position: absolute;
   top: 25vh;
   right: 40vw;
+  opacity: 0;
 }
+
+@keyframes show-up{
+  0%{
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.javaCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 40vw;
+  animation: show-up 2s;
+}
+
 
 .mysqlCss{
   width: 5%;
@@ -20,6 +42,31 @@
   position: absolute;
   top: 15vh;
   right: 33vw;
+  opacity: 0;
+}
+
+.mysqlCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 33vw;
+  animation: show-up-delay 3s;
+}
+
+@keyframes show-up-delay{
+  0%{
+    opacity: 0;
+    
+  }
+  25%{
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .reactCss{
@@ -28,6 +75,16 @@
   position: absolute;
   top: 5vh;
   right: 24vw;
+  opacity: 0;
+}
+
+.reactCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 5vh;
+  right: 24vw;
+  animation: show-up-delay 4s;
 }
 
 .githubCss{
@@ -36,14 +93,34 @@
   position: absolute;
   top: 15vh;
   right: 15vw;
+  opacity: 0;
 }
 
-.css3Css{
+.githubCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 15vw;
+  animation: show-up-delay 5s;
+}
+
+.cssCss{
   width: 5%;
   height: auto;
   position: absolute;
   top: 25vh;
   right: 7vw;
+  opacity: 0;
+}
+
+.cssCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 7vw;
+  animation: show-up-delay 6s;
 }
 
 .pre-text{

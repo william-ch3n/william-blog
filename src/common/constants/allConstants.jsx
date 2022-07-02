@@ -14,6 +14,7 @@ export const AUTO_TEXT = {
         "William Ch3n.",
         "recommending PC access.",
         "a full stack engineer.",
+        "speaking 3 languages.",
         "greeting you!",
         "enjoying coding.",
         "dreaming of my own biz.",

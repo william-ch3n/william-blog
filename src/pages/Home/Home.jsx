@@ -19,6 +19,7 @@ import MeAndIcons from '../../components/MeAndIcons'
 import { Grid } from '@mui/material'
 import LeftBanner from '../../components/LeftBanner';
 import RightBanner from '../../components/RightBanner';
+import Portfolio from '../../components/Portfolio';
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
           <Grid item xs={10}>
             <TextVideo />
             <MeAndIcons />
+            <Portfolio />
           </Grid>
 
           <Grid item xs={1} sx={{ position: "fixed", background: "none", zIndex: 1 }}>
