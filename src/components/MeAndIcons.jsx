@@ -41,7 +41,7 @@ export default function MeAndIcons() {
           mysqlRef.current.classList.remove("mysqlCss");
           reactRef.current.classList.remove("reactCss");
           githubRef.current.classList.remove("githubCss");
-          cssRef.current.classList.remove("cssCss-active");
+          cssRef.current.classList.remove("cssCss");
           javaRef.current.classList.add("javaCss-active");
           mysqlRef.current.classList.add("mysqlCss-active");
           reactRef.current.classList.add("reactCss-active");
