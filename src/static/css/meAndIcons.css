@@ -32,7 +32,7 @@
   position: absolute;
   top: 25vh;
   right: 40vw;
-  animation: show-up 2s;
+  animation: show-up 1.5s;
 }
 
 
@@ -51,7 +51,7 @@
   position: absolute;
   top: 15vh;
   right: 33vw;
-  animation: show-up-delay 3s;
+  animation: show-up-delay 2s;
 }
 
 @keyframes show-up-delay{
@@ -84,7 +84,7 @@
   position: absolute;
   top: 5vh;
   right: 24vw;
-  animation: show-up-delay 4s;
+  animation: show-up-delay 2.5s;
 }
 
 .githubCss{
@@ -102,7 +102,7 @@
   position: absolute;
   top: 15vh;
   right: 15vw;
-  animation: show-up-delay 5s;
+  animation: show-up-delay 3s;
 }
 
 .cssCss{
@@ -120,7 +120,7 @@
   position: absolute;
   top: 25vh;
   right: 7vw;
-  animation: show-up-delay 6s;
+  animation: show-up-delay 3.5s;
 }
 
 .pre-text{
@@ -325,7 +325,6 @@
   
   
   .meAndIconsDiv{
-    /* border: 10px solid blue; */
     position: absolute;
     width: 100vw;
     height: 60vh;

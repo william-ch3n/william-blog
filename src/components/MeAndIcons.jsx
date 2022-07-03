@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useEffect } from 'react'
+import React, { Fragment, useRef, useEffect, useState } from 'react'
 import mysql from '../static/img/mysql.png'
 import java from '../static/img/java.png'
 import react from '../static/img/react.png'
@@ -11,12 +11,6 @@ import Typed from 'typed.js'
 import { AUTO_TEXT } from '../common/constants/allConstants'
 
 export default function MeAndIcons() {
-
-
-  // const wrapper = document.getElementById("highlight-effect");
-  const wrapper = useRef(null);
-  const className = "in-view";
-      
 
   // Create reference to store the DOM element containing the animation
   const el = useRef(null);
@@ -35,7 +29,6 @@ export default function MeAndIcons() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          wrapper.current.classList.add(className);  
           
           javaRef.current.classList.remove("javaCss");
           mysqlRef.current.classList.remove("mysqlCss");
@@ -50,7 +43,6 @@ export default function MeAndIcons() {
           return;
         }
     
-        wrapper.current.classList.remove(className);
         javaRef.current.classList.remove("javaCss-active");
         mysqlRef.current.classList.remove("mysqlCss-active");
         reactRef.current.classList.remove("reactCss-active");
@@ -80,10 +72,8 @@ export default function MeAndIcons() {
 
     // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options);
-
-    // javaRef.current = 
     
-    observer.observe(wrapper.current);
+    observer.observe(iconsRef.current);
     // observer.observe(javaRef.current);
     return () => {
       // Make sure to destroy Typed instance during cleanup
@@ -114,7 +104,7 @@ export default function MeAndIcons() {
         </div>
 
     <div>
-      <div ref={wrapper} >
+      <div ref={iconsRef} >
         <img className="javaCss" src={java} alt="" ref={javaRef}/>
         <img className="mysqlCss" src={mysql} alt="" ref={mysqlRef}/>
         <img className="reactCss" src={react} alt="" ref={reactRef}/>

@@ -1,20 +1,22 @@
 .portfolioDiv{
   width: 100vw;
-  height: 120vh;
+  height: 120vw;
   position: absolute;
   border: 3px black solid;
   top: 200vh;
 }
 
 .title{
-  width: 10vw;
+  width: 30vw;
   height: auto;
-  font-size: 8vh;
+  font-size: 6vw;
   font-family: Comic Sans MS;
   font-weight: bold;
   position: relative;
   top: 10vh;
   left: 40%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .arrowSvg{
@@ -25,29 +27,44 @@
   transform: scaleX(-1)
 }
 
-.arrowPath {
-  stroke-dasharray: 233.89927673339844;
-  stroke-dashoffset: 233.89927673339844;
-  /* animation: dash 5s linear alternate infinite; */
-}
 
 .acnLogo{
   position: relative;
   width: 20vw;
   height: auto;
-  margin-left: -10vw;
-  padding-left: 20vw;
+  left: 15vw;
   font-size: 20vw;
   cursor: pointer;
-  transition: all 2s ease;
-  /* border: 1px orange solid; */
-  z-index: 1;
+  color: black;
+  opacity: 0;
+  text-shadow: 10px 10px 10px gray;
+  
 }
 
-.acnLogo:hover{
-  transform: translateX(35%);
-  color: blueviolet;
+@keyframes move{
+  0%{
+    transform: translateX(-15vw);
+    color: black;
+  }
+  100%{
+    transform: translateX(0);
+    color: blueviolet;
+  }
 }
+
+.acnLogo-active{
+  position: relative;
+  width: 20vw;
+  height: auto;
+  left: 15vw;
+  font-size: 20vw;
+  cursor: pointer;
+  color: blueviolet;
+  animation: move 2s;
+  opacity: 1;
+}
+
+
 
 .float-div{
   position: relative;
@@ -97,7 +114,6 @@
 .portfolio1div{
   width: 50vw;
   height: auto;
-  border: 1px black solid;
   position: relative;
   top: -42vw;
   right: 10vw;
@@ -116,12 +132,16 @@
 }
 
 .gearDiv1{
+  width: 10vw;
+  height: auto;
   position: relative;
   top: 20vh;
   left: 12.5vw;
 }
 
 .gearDiv2{
+  width: 10vw;
+  height: auto;
   position: relative;
   top: -0.5vh;
   left: 24.5vw;
@@ -158,6 +178,8 @@
 }
 
 .databaseDiv{
+  width: 10vw;
+  height: auto;
   position: relative;
   top: -12vh;
   left: 16vw;
@@ -193,10 +215,221 @@
     fill:#444;
   }
   100% {
-    /* fill:mediumseagreen; */
     fill:violet;
   }
   0% {
     fill:#444;
   }
+}
+
+.highlight{
+  position: relative;
+}
+
+.highlight:before{
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: -2px;
+  left: -5px;
+  right: -5px;
+  bottom: -2px;
+  /* background-color: #7eec99; */
+  background-color: violet;
+  transform-origin: 0;
+  transition: transform 3.5s ease;
+  transform: scaleX(0);
+}
+
+.in-view .highlight:before{
+  transform: scaleX(1);
+  cursor: pointer;
+}
+
+
+.secondPartDiv{
+  position: relative;
+  width: 100vw;
+  height: 60vw;
+  border: 2px solid red;
+}
+
+.rakuDiv{
+  position: relative;
+  top: 10vw;
+  width: 15vw;
+  height: auto;
+  left: 65vw;
+}
+
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+.rakuCss {
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-shadow: none;
+  font-family: Geneva;
+  -webkit-text-stroke: 0px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 14vw;
+  color: transparent;
+}
+
+
+@keyframes shadows{
+  0%{
+    font-variation-settings: "wght" 50, "ital" 1;
+    text-shadow: none;
+    /* font-family: Geneva; */
+    -webkit-text-stroke: 0px;
+    cursor: pointer;
+  }
+  100%{
+    -webkit-text-stroke: 4px #DC143C;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: 14vw;
+    color: transparent;
+    font-family: "Meta", sans-serif;
+    text-shadow: 10px 10px 0px #07bccc,
+      15px 15px 0px #e601c0,
+      20px 20px 0px #e9019a,
+      25px 25px 0px #f40468,
+      40px 40px 10px #482896;
+  }
+}
+
+.rakuCss-active{
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #DC143C;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 14vw;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    40px 40px 10px #482896;
+  cursor: pointer;
+  animation: shadows 2s;
+}
+
+
+.coinCss{
+  position: relative;
+  width: 7vw;
+  height: auto;
+  top:-45vw;
+  left: 77vw;
+  opacity: 0.5;
+}
+
+.coinCss-active{
+  position: relative;
+  width: 7vw;
+  height: auto;
+  top:-45vw;
+  left: 77vw;
+  animation: coin-disappear 2s infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes coin-disappear{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-5vw);
+  }
+}
+
+.surveyCss{
+  position: relative;
+  width: 12vw;
+  height: auto;
+  top: 15vw;
+  left: 60vw;
+}
+
+#gradient-horizontal2 {
+  --color-stop-1: #e06161;
+  --color-stop-2: #fd1da9;
+  --color-stop-3: #fc8545;
+}
+
+.surveySvg{
+  position: relative;
+  width: 12vw;
+  height: auto;
+  fill:url(#gradient-horizontal2);
+}
+
+.surveyPen-active{
+  animation: vibrate 0.75s infinite ease-in-out;
+  animation-delay: 1.5s;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+.portfolio2div{
+  width: 50vw;
+  height: auto;
+  position: relative;
+  top: -80vw;
+  left: 7vw;
+}
+
+.highlight2{
+  position: relative;
+}
+
+.highlight2:before{
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: -2px;
+  left: -5px;
+  right: -5px;
+  bottom: -2px;
+  /* background-color: #7eec99; */
+  background-color: #DB7093;
+  transform-origin: 0;
+  transition: transform 3.5s ease;
+  transform: scaleX(0);
+}
+
+.in-view .highlight2:before{
+  transform: scaleX(1);
+  cursor: pointer;
 }
