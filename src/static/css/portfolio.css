@@ -259,7 +259,7 @@
   top: 10vw;
   width: 15vw;
   height: auto;
-  left: 65vw;
+  left: 70vw;
 }
 
 
@@ -273,24 +273,26 @@
 
 
 .rakuCss {
-  font-variation-settings: "wght" 100, "ital" 0;
-  text-shadow: none;
+  font-variation-settings: "wght" 100, "ital" 1;
+  text-shadow: 10px 10px 10px gray;
   font-family: Geneva;
-  -webkit-text-stroke: 0px;
+  -webkit-text-stroke: 4px #DC143C;
   cursor: pointer;
   transition: all 0.5s;
   font-size: 14vw;
-  color: transparent;
+  /* color: transparent; */
+  color: #DC143C;
 }
 
 
 @keyframes shadows{
   0%{
-    font-variation-settings: "wght" 50, "ital" 1;
-    text-shadow: none;
+    font-variation-settings: "wght" 100, "ital" 1;
+    text-shadow: 10px 10px 10px gray;
     /* font-family: Geneva; */
-    -webkit-text-stroke: 0px;
+    -webkit-text-stroke: 4px #DC143C;
     cursor: pointer;
+    color: #DC143C;
   }
   100%{
     -webkit-text-stroke: 4px #DC143C;
@@ -329,7 +331,7 @@
   width: 7vw;
   height: auto;
   top:-45vw;
-  left: 77vw;
+  left: 82vw;
   opacity: 0.5;
 }
 
@@ -338,7 +340,7 @@
   width: 7vw;
   height: auto;
   top:-45vw;
-  left: 77vw;
+  left: 82vw;
   animation: coin-disappear 2s infinite;
   animation-delay: 1.5s;
 }
@@ -359,7 +361,7 @@
   width: 12vw;
   height: auto;
   top: 15vw;
-  left: 60vw;
+  left: 65vw;
 }
 
 #gradient-horizontal2 {
@@ -407,7 +409,7 @@
   height: auto;
   position: relative;
   top: -80vw;
-  left: 7vw;
+  left: 12vw;
 }
 
 .highlight2{

@@ -235,19 +235,19 @@ export default function Portfolio() {
             <div className="portfolio2div">
               <p className="portfolioNumber">#2</p>
               <p className="portfolio1text" ref={highlight2Ref}>
-                After 3 years of working as half-consultant and half-developer, finally I made up my mind to dive into the coding.
+                After 3 years of working as half-consultant and half-developer, finally I made up my mind to dive into the coding world.
                 <br />
                 <br />
                 Later on, I started working in one of Japanese IT gaints where we provide a web service to recruit members for <span className="highlight2">marketing research</span>.
                 <br />
                 <br />
-                <span className="highlight2">You answer surveys, you get the money</span> -- The business here is quite simple.
+                <span className="highlight2">You answer the survey, you get the money</span> -- The business here is quite simple.
                 <br ref={animationTrigger2Ref}/>
                 <br />
-                However, tons of assignments are flooding to me. Backend, frontend, infrastructure, DB design, batch, so on and so forth. 
+                However, tons of assignments are flooding to me due to short of hands. Backend, frontend, infrastructure, DB design, batch, so on and so forth. 
                 <br />
                 <br />
-                Great chanllenge and <span className="highlight2">great opportunity</span> at the same time!
+                To me, that's great chanllenge and <span className="highlight2">great opportunity</span> at the same time!
               </p>
             </div>
 
