@@ -1,0 +1,10 @@
+.footerCss{
+  position: relative;
+  width: 100vw;
+  height: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.75vw;
+  background-color: black;
+  color: aliceblue;
+}

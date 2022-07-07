@@ -20,6 +20,7 @@ import { Grid } from '@mui/material'
 import LeftBanner from '../../components/LeftBanner';
 import RightBanner from '../../components/RightBanner';
 import Portfolio from '../../components/Portfolio';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
@@ -48,6 +49,9 @@ export default function Home() {
 
         </Grid>
       </Grid>
+
+      <Footer />
+
     </div>
   )
 }

@@ -196,8 +196,7 @@
 
 
 .meAndIconsDiv{
-  /* border: 10px solid blue; */
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
 }
@@ -325,7 +324,7 @@
   
   
   .meAndIconsDiv{
-    position: absolute;
+    position: relative;
     width: 100vw;
     height: 60vh;
   }
