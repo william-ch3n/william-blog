@@ -160,7 +160,7 @@ export default function Portfolio() {
           <div className="portfolio1div" ref={titleRatioRef}>
             <p className="portfolioNumber"># 1</p>
             <p className="portfolio1text" ref={highlightRef}>
-              My first journey in IT industry was working with a bunch of talented teammates to develop an <span className="highlight">ETL system</span> for an leading insurance company. 
+              My first journey in IT industry was working in an IT consulting firm to develop an <span className="highlight">ETL system</span> for an leading insurance company. 
               <br />
               <br />
               The technologies were not really fancy though, it would be used to process <span className="highlight">millions of data</span> daily or periodly as the backbone of the bussiness on backstage.
