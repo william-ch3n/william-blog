@@ -10,7 +10,9 @@ export default function RightBanner() {
 
   return (
     <Fragment>
-      <span className="dot-ripple" onClick={clickDot}/>
+      <div className="rightBannerDiv">
+        <span className="dot-ripple" onClick={clickDot}/>
+      </div>
     </Fragment>
   )
 }

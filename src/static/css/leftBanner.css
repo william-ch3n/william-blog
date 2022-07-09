@@ -1,7 +1,15 @@
+.leftBannerDiv{
+    position: sticky;
+    width: 5vw;
+    height: auto;
+    top: 83vh;
+    z-index: 1;
+}
+
 .SnsIconsSvg{
     width: 1.8vw;
     left: 1vw;
-    top: 86vh;
+    /* top: 86vh; */
     position: relative;
     cursor: pointer;
 }
@@ -16,7 +24,7 @@
     --color-stop-3: #f5976e;
 }
 
-@media screen and (max-width:720px) {
+/* @media screen and (max-width:720px) {
     .SnsIconsSvg{
         width: 25px;
         height: 25px;
@@ -25,4 +33,4 @@
         position: relative;
         cursor: pointer;
     }
-}
+} */

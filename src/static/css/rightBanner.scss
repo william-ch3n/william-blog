@@ -1,12 +1,19 @@
 $green: black;
 
+.rightBannerDiv{
+  position: sticky;
+  width: 3vw;
+  height: auto;
+  top: 92vh;
+  left: 96vw;
+  z-index: 1;
+}
+
 .dot-ripple {
   display: block;
   width: 25px;
   height: 25px;
   position: relative;
-  top: 93vh;
-  left: 96vw;
   border-radius: 12.5px;
   background-color: gray;
   opacity: 1;

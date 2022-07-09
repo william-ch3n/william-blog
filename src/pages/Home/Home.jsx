@@ -30,25 +30,15 @@ export default function Home() {
 
       <Header />
 
-      <Grid container spacing={2} direction="column">
-        <Grid item xs={12} container>
 
-          <Grid item xs={1} sx={{ position: "fixed", background: "none", zIndex: 1 }}>
             <LeftBanner />
-          </Grid>
+            <RightBanner />
 
-          <Grid item xs={10}>
             <TextVideo />
             <MeAndIcons />
             <Portfolio />
-          </Grid>
 
-          <Grid item xs={1} sx={{ position: "fixed", background: "none", zIndex: 1 }}>
-            <RightBanner />
-          </Grid>
-
-        </Grid>
-      </Grid>
+            
 
       <Footer />
 
