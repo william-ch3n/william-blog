@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import '../static/css/portfolio.css'
-import Footer from './Footer';
 
 export default function Portfolio() {
 

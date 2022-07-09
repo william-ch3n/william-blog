@@ -1,12 +1,9 @@
 import React, { Fragment, useRef, useState } from 'react'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import { Avatar, Tooltip, Grid } from '@mui/material'
 import avatar from '../static/img/avator.jpg'
 import '../static/css/header.css'
-import { css } from '@emotion/react';
-import { styled } from '@mui/material/styles';
 import { GREETINGS } from '../common/constants/allConstants';
 import SwipeableMenu from './SwipeableMenu';
 

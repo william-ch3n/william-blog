@@ -32,9 +32,11 @@ video{
   }
   
 .textVideoDiv{
+  position: relative;
   width: 100vw;
   height: 75vh;
-  z-index: 1;
+  top: -7vw;
+  z-index: 0;
 }
 
 /* 适配手机屏幕 */

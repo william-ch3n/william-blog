@@ -1,9 +1,4 @@
 import React, { Fragment } from 'react'
-import twitter from '../static/img/twitter.svg'
-import facebook from '../static/img/facebook.svg'
-import github from '../static/img/github.svg'
-import instagram from '../static/img/instagram.svg'
-import linkedin from '../static/img/linkedin.svg'
 import '../static/css/leftBanner.css'
 import { SNS_URL } from '../common/constants/allConstants'
 
