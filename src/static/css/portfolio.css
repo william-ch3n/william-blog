@@ -20,15 +20,15 @@
   position: relative;
   top: 10vh;
   left: 40%;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .arrowSvg{
   width: 10vw;
   height: auto;
-  position: relative;
-  left: 75%;
+  position: absolute;
+  left: 75vw;
   transform: scaleX(-1)
 }
 
