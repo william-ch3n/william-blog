@@ -1,9 +1,20 @@
+.headerDiv{
+    position: sticky;
+    width: 100vw;
+    height: 20vh;
+    top: 0;
+    z-index: 1;
+}
+
 .avatar{
-    width: 75%;
-    height: 75%;
+    position: absolute;
+    width: 6vw;
+    height: auto;
     border-radius: 50%;
     position: relative;
     top: 6vh;
+    bottom: 0;
+    left: 20vw;
 }
 
 .avatar:hover{
@@ -13,26 +24,27 @@
 
 
 .tabBox{
-    position: relative;
-    top: 8vh;
-    margin-right: 20%;
-    
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 10vh;
+    left: 35vw;
 }
 
 .wordBox{
     width: 7vw;
-    position: relative;
-    top: 8vh;
+    position: absolute;
+    top: 11vh;
+    left: 30vw;
     font-size: 2vw;
-    padding-left: 1vw;
 }
 
 .wordBox-fadeOut{
     width: 7vw;
-    position: relative;
-    top: 8vh;
+    position: absolute;
+    top: 11vh;
+    left: 30vw;
     font-size: 2vw;
-    padding-left: 1vw;
     animation: fadeout-anim 2s linear forwards;
 }
 

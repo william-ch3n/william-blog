@@ -25,60 +25,42 @@ export default function Header() {
 	}
 
 	const onClick = () => {
-		let index = Math.floor(Math.random()*GREETINGS.WORDS.length);
-		setWord(GREETINGS.WORDS[index]+GREETINGS.WORDS[index]+GREETINGS.WORDS[index]);
+		let index = Math.floor(Math.random() * GREETINGS.WORDS.length);
+		setWord(GREETINGS.WORDS[index] + GREETINGS.WORDS[index] + GREETINGS.WORDS[index]);
 		setWordCss("wordBox");
-		setTimeout(()=>{
+		setTimeout(() => {
 			setWordCss("wordBox-fadeOut");
-		}, 1000);	
+		}, 1000);
 	}
 
 
 	return (
 		<Fragment>
 
-		<Grid container spacing={2} direction="column" sx={{position: "fixed", background:"none", zIndex:1, height:"4vh"}} elevation={3}>
-
-			<Grid item xs={12} container>
-				<Grid item xs={1}></Grid>
-
-				<Grid item xs={10}>
-					<Grid item xs={12} container>
-						<Grid item xs={2}></Grid>
-						<Grid item xs={1}>
-							<Box className="avatarBox">
-								<Tooltip title="Hello there! 👋">
-								<img src={avatar} alt="" className="avatar" onClick={onClick}/>
-								</Tooltip>
-							</Box>
-						</Grid>
-						<Grid item xs={1} className="">
-							<Box className={wordCss} ref={wordRef}>
-								{word}
-							</Box>
-						</Grid>
-						<Grid item xs={8}>
-							<Box className="tabBox" >
-								<Tabs value={index} onChange={handleChange} centered >
-									<Tab disableRipple={true} label="Home" style={{minWidth:"15%"}}/>
-									<Tab disableRipple={true} label="Notes" style={{minWidth:"15%"}}/>
-									<Tab disableRipple={true} label="Album" style={{minWidth:"15%"}}/>
-									<Tab disableRipple={true} label="About" style={{minWidth:"15%"}} />
-								</Tabs>
-							</Box>
-							<SwipeableMenu />
-						</Grid>
-					</Grid>
-				</Grid>
-
-				<Grid item xs={1}></Grid>
-			</Grid>
+			<div className="headerDiv">
+				<div className="avatarBox">
+					<Tooltip title="Hello there! 👋">
+						<img src={avatar} alt="" className="avatar" onClick={onClick} />
+					</Tooltip>
+				</div>
 
 
-		</Grid>
+				<div className={wordCss} ref={wordRef}>
+					{word}
+				</div>
 
 
-			{/* </Box> */}
+				<div className="tabBox" >
+					<Tabs value={index} onChange={handleChange} centered >
+						<Tab disableRipple={true} label="Home" style={{ minWidth: "15%" }} />
+						<Tab disableRipple={true} label="Notes" style={{ minWidth: "15%" }} />
+						<Tab disableRipple={true} label="Album" style={{ minWidth: "15%" }} />
+						<Tab disableRipple={true} label="About" style={{ minWidth: "15%" }} />
+					</Tabs>
+				</div>
+				<SwipeableMenu />
+			</div>
+
 		</Fragment>
 	)
 }
