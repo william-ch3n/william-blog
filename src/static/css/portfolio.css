@@ -293,7 +293,7 @@
 @keyframes shadows{
   0%{
     font-variation-settings: "wght" 100, "ital" 1;
-    text-shadow: 10px 10px 10px gray;
+    text-shadow: 0.1vh 0.1vh 0.1vh gray;
     /* font-family: Geneva; */
     -webkit-text-stroke: 4px #DC143C;
     cursor: pointer;

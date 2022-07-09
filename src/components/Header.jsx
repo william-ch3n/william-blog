@@ -1,7 +1,7 @@
 import React, { Fragment, useRef, useState } from 'react'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import { Avatar, Tooltip, Grid } from '@mui/material'
+import { Tooltip } from '@mui/material'
 import avatar from '../static/img/avator.jpg'
 import '../static/css/header.css'
 import { GREETINGS } from '../common/constants/allConstants';
@@ -16,6 +16,9 @@ export default function Header() {
 	const [wordCss, setWordCss] = useState("wordBox");
 
 	const wordRef = useRef();
+	const headerDivRef = useRef();
+	const avatarRef = useRef();
+	const tabBoxRef = useRef();
 
 	const handleChange = (event, newValue) => {
 		setIndex(newValue);
@@ -30,14 +33,41 @@ export default function Header() {
 		}, 1000);
 	}
 
+	window.onscroll = function () { 
+		scrollFunction() 
+	};
+
+	function scrollFunction() {
+		console.log("top:",document.documentElement.scrollTop);
+		console.log("type:",document.documentElement.scrollTop);
+		if (document.documentElement.scrollTop > 50 ) {
+			
+			avatarRef.current.style.top = "1vh";
+			avatarRef.current.style.width = "5vh";
+			tabBoxRef.current.style.top = "1vh";
+			wordRef.current.style.top = "1vh";
+			// the height of the header has some problem while transit
+			headerDivRef.current.style.height = "7vh";
+			headerDivRef.current.style.boxShadow = "1.5px 1.5px 1.5px #D3D3D3";
+		} else {
+			
+			avatarRef.current.style.top = "6vh";
+			avatarRef.current.style.width = "6vw";
+			tabBoxRef.current.style.top = "10vh";
+			wordRef.current.style.top = "11vh";
+			headerDivRef.current.style.height = "20vh";
+			headerDivRef.current.style.boxShadow = "none";
+		}
+	}
+
 
 	return (
 		<Fragment>
 
-			<div className="headerDiv">
-				<div className="avatarBox">
+			<div className="headerDiv" ref={headerDivRef}>
+				<div className="avatarBox" >
 					<Tooltip title="Hello there! 👋">
-						<img src={avatar} alt="" className="avatar" onClick={onClick} />
+						<img src={avatar} alt="" className="avatar" onClick={onClick} ref={avatarRef}/>
 					</Tooltip>
 				</div>
 
@@ -47,7 +77,7 @@ export default function Header() {
 				</div>
 
 
-				<div className="tabBox" >
+				<div className="tabBox" ref={tabBoxRef}>
 					<Tabs value={index} onChange={handleChange} centered >
 						<Tab disableRipple={true} label="Home" style={{ minWidth: "15%" }} />
 						<Tab disableRipple={true} label="Notes" style={{ minWidth: "15%" }} />

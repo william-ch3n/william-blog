@@ -1,9 +1,11 @@
 .headerDiv{
     position: sticky;
     width: 100vw;
-    height: 20vh;
+    height: 9vh;
     top: 0;
     z-index: 1;
+    transition: 0.5s;
+    background-color: white;
 }
 
 .avatar{
@@ -15,6 +17,7 @@
     top: 6vh;
     bottom: 0;
     left: 20vw;
+    transition: 0.5s;
 }
 
 .avatar:hover{
@@ -29,6 +32,7 @@
     position: absolute;
     top: 10vh;
     left: 35vw;
+    transition: 0.5s;
 }
 
 .wordBox{
@@ -37,6 +41,7 @@
     top: 11vh;
     left: 30vw;
     font-size: 2vw;
+    transition: 0.5s;
 }
 
 .wordBox-fadeOut{
@@ -45,6 +50,7 @@
     top: 11vh;
     left: 30vw;
     font-size: 2vw;
+    transition: 0.5s;
     animation: fadeout-anim 2s linear forwards;
 }
 
