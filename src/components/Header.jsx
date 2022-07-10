@@ -38,15 +38,12 @@ export default function Header() {
 	};
 
 	function scrollFunction() {
-		console.log("top:",document.documentElement.scrollTop);
-		console.log("type:",document.documentElement.scrollTop);
-		if (document.documentElement.scrollTop > 50 ) {
+		if (window.scrollY > 50 ) {
 			
 			avatarRef.current.style.top = "1vh";
 			avatarRef.current.style.width = "5vh";
 			tabBoxRef.current.style.top = "1vh";
 			wordRef.current.style.top = "1vh";
-			// the height of the header has some problem while transit
 			headerDivRef.current.style.height = "7vh";
 			headerDivRef.current.style.boxShadow = "1.5px 1.5px 1.5px #D3D3D3";
 		} else {

@@ -1,5 +1,5 @@
 .leftBannerDiv{
-    position: sticky;
+    position: fixed;
     width: 5vw;
     height: auto;
     top: 85vh;

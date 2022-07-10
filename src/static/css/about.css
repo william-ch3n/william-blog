@@ -1,0 +1,85 @@
+.aboutDiv{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.openButton{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
+.openLine{
+  position: absolute;
+  width: 100vw;
+  height: 0.5vh;
+  top: 58vh;
+  background-color: white;
+  transition: 0.8s;
+  left:-100vw;
+  z-index: 10;
+}
+
+.topBlock{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 0;
+  background-color: black;
+  z-index: -1;
+  transition: 1s;
+}
+
+.bottomBlock{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 50vh;
+  background-color:black;
+  z-index: -1;
+  transition: 1s;
+}
+
+
+
+/* dice css */
+
+.tray {
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  /* align-items:center;  */
+  z-index: 0;
+}
+
+@media
+(orientation: portrait) {
+  .tray {
+    flex-direction:column;
+  } 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  .tray {
+    transform:scale(50%);
+    transform-origin: top left;
+    width:200%;
+    height:200%;
+  }
+}
+
+.die{
+  position: absolute;
+  top: 100vh;
+  transition: 0.5s;
+}
+
+.die:hover{
+  cursor: pointer;
+  transition: 0.5s;
+}
