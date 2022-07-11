@@ -1,24 +1,32 @@
-import React, { Fragment, useRef, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
+import {useSelector} from 'react-redux'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Tooltip } from '@mui/material'
 import avatar from '../static/img/avator.jpg'
 import '../static/css/header.css'
-import { GREETINGS } from '../common/constants/allConstants';
+import { GREETINGS, HINTS } from '../common/constants/allConstants';
 import SwipeableMenu from './SwipeableMenu';
 
 export default function Header() {
 
 	const [index, setIndex] = useState(0);
-
 	const [word, setWord] = useState("");
-
 	const [wordCss, setWordCss] = useState("wordBox");
-
 	const wordRef = useRef();
 	const headerDivRef = useRef();
 	const avatarRef = useRef();
 	const tabBoxRef = useRef();
+
+	// use Redux to get state
+	const {showHint} = useSelector(state => state.headerReducer);
+
+	// monitor showHint, if it turns true, execute displayHint()
+	useEffect(()=>{
+		if(showHint)
+			displayHint();
+	},[showHint]);
+
 
 	const handleChange = (event, newValue) => {
 		setIndex(newValue);
@@ -31,6 +39,14 @@ export default function Header() {
 		setTimeout(() => {
 			setWordCss("wordBox-fadeOut");
 		}, 1000);
+	}
+
+	const displayHint = () => {
+		setWord(HINTS.DICE);
+		setWordCss("wordBox");
+		setTimeout(() => {
+			setWordCss("wordBox-fadeOut");
+		}, 1500);
 	}
 
 	window.onscroll = function () { 

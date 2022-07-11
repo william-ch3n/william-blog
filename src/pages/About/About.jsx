@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import '../../static/css/about.css'
 import { gsap } from "gsap";
 import dieSvg from '../../static/img/dieSprite.svg'
+import { useDispatch } from 'react-redux';
+import { actionShowHint } from '../../common/redux/actions/headerActions';
 
 export default function About() {
 
@@ -10,6 +12,9 @@ export default function About() {
   const bottomBlock = useRef();
   const trayRef = useRef();
   const dieRef = useRef();
+
+  // 准备。调用redux hooks获取dispatch
+  const dispatch = useDispatch();
 
   const openCurtain = () => {
     setTimeout(()=>{
@@ -25,7 +30,13 @@ export default function About() {
     , 1500);
   }
 
+  // 骰子动画的初始化
   useEffect(()=>{
+
+    // 用redux更新state，使header显示hint
+    dispatch(actionShowHint(true));
+
+    // 初始化dice元素
     gsap.set(".face", {
       position:'absolute',
       userSelect:'none',
@@ -44,17 +55,21 @@ export default function About() {
     
   },[]);
 
+  // 骰子的常量，初始面为3
   const rots = [ 
-    { ry: 0,   rx: 0  }, // 1
-    { ry: 90,  rx: 0  }, // 2
     { ry: 180, rx: 0  }, // 3
+    { ry: 90,  rx: 0  }, // 2
+    { ry: 0, rx: 0  },   // 1
     { ry: 270, rx: 0  }, // 4
     { ry: 0,   rx: 90 }, // 5
     { ry: 0,   rx:-90 }  // 6
   ];
+
+
+  // dice的正面的值，初始值为0
+  let val = [0]
   
-  let val = [1,1]
-  
+  // 掷骰子功能
   function roll(){
     val[0] = gsap.utils.random(1,6,1)
     
@@ -79,18 +94,16 @@ export default function About() {
       }, 0)
 
 
-      // only when value = 6 to open the curtain
+      // 只有在dice掷到6的时候才会开幕
       if( val[0] === 6){
         openCurtain();
       }
-
-
-      
   };
 
 
   return (
     <div className="aboutDiv">
+
       <div className="tray" ref={trayRef}>
         <div className="die" onClick={roll} ref={dieRef}>
           <div className="cube">

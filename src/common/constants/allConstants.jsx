@@ -27,3 +27,11 @@ export const AUTO_TEXT = {
         "thinking of new words."
     ]
 }
+
+export const HINTS = {
+    DICE : "🎲 => 6"
+}
+
+export const HEADER_ACTIONS = {
+    SHOW_HINT: "SHOW_HINT"
+}
