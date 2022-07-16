@@ -15,8 +15,8 @@ function App() {
       <Header />
       <LeftBanner />
       <RightBanner />
-      {/* <Home /> */}
-      <About />
+      <Home />
+      {/* <About /> */}
       <Footer />
       </Provider>
     </div>

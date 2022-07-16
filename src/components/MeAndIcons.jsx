@@ -64,8 +64,8 @@ export default function MeAndIcons() {
   useEffect(() => {
     const options = {
       strings: AUTO_TEXT.STRINGS,
-      typeSpeed: 75,
-      backSpeed: 75,
+      typeSpeed: 50,
+      backSpeed: 50,
       loop: true
     };
 
