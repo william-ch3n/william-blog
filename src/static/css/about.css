@@ -57,12 +57,14 @@
   z-index: -2;
 }
 
+
 .introduction{
   position: absolute;
   width: 50vw;
   height: 45vw;
   top: 15vw;
   left: 45vw;
+  display: none;
 }
 
 .p1{
@@ -155,7 +157,6 @@
 .gradient-border {
   --border-width: 9px;
   position: absolute;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   width: 50vw;

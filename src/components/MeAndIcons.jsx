@@ -93,7 +93,7 @@ export default function MeAndIcons() {
           <br />
           <section>
             <div className="highlight-effect" >
-              <span className="pre-text">I'm </span>
+              <span className="pre-text">😉 Hi! I'm </span>
             </div>
           </section>
           <br />

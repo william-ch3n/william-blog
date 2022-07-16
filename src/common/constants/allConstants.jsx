@@ -33,5 +33,13 @@ export const HINTS = {
 }
 
 export const HEADER_ACTIONS = {
-    SHOW_HINT: "SHOW_HINT"
+    SHOW_HINT: "SHOW_HINT",
+    STORE_TAB_VALUE: "STORE_TAB_VALUE"
+}
+
+export const MENU_TABS = {
+    0 : "home",
+    1 : "notes",
+    2 : "album",
+    3 : "about"
 }

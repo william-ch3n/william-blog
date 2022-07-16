@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Tooltip } from '@mui/material'
@@ -7,6 +7,9 @@ import avatar from '../static/img/avator.jpg'
 import '../static/css/header.css'
 import { GREETINGS, HINTS } from '../common/constants/allConstants';
 import SwipeableMenu from './SwipeableMenu';
+import { useNavigate, Outlet } from 'react-router-dom'
+import { actionStoreTabValue } from '../common/redux/actions/headerActions';
+import { getUrlBase } from '../common/utils/urlUtils';
 
 export default function Header() {
 
@@ -20,16 +23,36 @@ export default function Header() {
 
 	// use Redux to get state
 	const {showHint} = useSelector(state => state.headerReducer);
+	const dispatch = useDispatch();
+
+	// 使用navigate来跳转页面
+	const navigate = useNavigate();
 
 	// monitor showHint, if it turns true, execute displayHint()
 	useEffect(()=>{
-		if(showHint)
+		if(index === 3)
 			displayHint();
-	},[showHint]);
+	},[index]);
+
+	// 初始化tab下标
+	useEffect(()=>{
+		const baseUrl = getUrlBase();
+			if(baseUrl.includes("home")){
+				setIndex(0);
+			}else if(baseUrl.includes("notes")){
+				setIndex(1);
+			}else if(baseUrl.includes("album")){
+				setIndex(2);
+			}else if(baseUrl.includes("about")){
+				setIndex(3);
+			}
+	},[]);
 
 
 	const handleChange = (event, newValue) => {
 		setIndex(newValue);
+		dispatch(actionStoreTabValue(newValue));
+		console.log("checkindex:", newValue);
 	}
 
 	const onClick = () => {
@@ -73,6 +96,10 @@ export default function Header() {
 		}
 	}
 
+	// 跳转页面
+	const clickTab = (tabName) => {
+		navigate(`${tabName}`);
+	}
 
 	return (
 		<Fragment>
@@ -92,14 +119,15 @@ export default function Header() {
 
 				<div className="tabBox" ref={tabBoxRef}>
 					<Tabs value={index} onChange={handleChange} centered >
-						<Tab disableRipple={true} label="Home" style={{ minWidth: "15%" }} />
-						<Tab disableRipple={true} label="Notes" style={{ minWidth: "15%" }} />
-						<Tab disableRipple={true} label="Album" style={{ minWidth: "15%" }} />
-						<Tab disableRipple={true} label="About" style={{ minWidth: "15%" }} />
+						<Tab disableRipple={true} label="Home" style={{ minWidth: "15%" }} onClick={()=>clickTab("home")}/>
+						<Tab disableRipple={true} label="Notes" style={{ minWidth: "15%" }} onClick={()=>clickTab("notes")}/>
+						<Tab disableRipple={true} label="Album" style={{ minWidth: "15%" }} onClick={()=>clickTab("album")}/>
+						<Tab disableRipple={true} label="About" style={{ minWidth: "15%" }} onClick={()=>clickTab("about")}/>
 					</Tabs>
 				</div>
 				<SwipeableMenu />
 			</div>
+
 
 		</Fragment>
 	)

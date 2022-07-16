@@ -15,6 +15,7 @@ export default function About() {
   const dieRef = useRef();
   const aboutDivRef = useRef();
   const containerRef = useRef();
+  const introductionRef = useRef();
 
   // 准备。调用redux hooks获取dispatch
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ export default function About() {
         openLineRef.current.style.display = "none";
         trayRef.current.style.display = "none";
         containerRef.current.style.display = "block";
+        introductionRef.current.style.display = "block";
       }, 1000);
     }
       , 1500);
@@ -136,11 +138,11 @@ export default function About() {
         // 文字来回擦除效果结束
 
 
-
-
-
-
-
+    // 每次取下组件的时候清除gsap的时间设定
+    return () => {
+      // gsap.
+      gsap.globalTimeline.clear()
+    };
   }, []);
 
   // 骰子的常量，初始面为3
@@ -220,8 +222,9 @@ export default function About() {
       {/* 荧光背景 */}
       <div className="myInfoDiv">
         <img src={me02} alt="" className="me02" />
-        <div className="introduction">
+        <div className="introduction" ref={introductionRef}>
           <p className="gradient-border">
+            <br />
             <span className="span1">&lt;coder&gt;</span><br />
             <span className="span2">Full stack developer who goes with</span><br />
             <span className="span2">Java, React, mySql, JavaScript, Css</span><br />
@@ -232,7 +235,7 @@ export default function About() {
         </div>
 
         {/* 黑板擦 */}
-        <div class="container" ref={containerRef}>
+        <div className="container" ref={containerRef}>
               <div className="slide-bar" id="slidebar">
                 <div className="bar" id="bar"></div>
               </div>
