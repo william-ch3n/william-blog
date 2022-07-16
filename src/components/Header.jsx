@@ -67,7 +67,7 @@ export default function Header() {
 			avatarRef.current.style.top = "6vh";
 			avatarRef.current.style.width = "6vw";
 			tabBoxRef.current.style.top = "10vh";
-			wordRef.current.style.top = "11vh";
+			wordRef.current.style.top = "9vh";
 			headerDivRef.current.style.height = "20vh";
 			headerDivRef.current.style.boxShadow = "none";
 		}
