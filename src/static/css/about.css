@@ -1,0 +1,265 @@
+.aboutDiv{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.openButton{
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
+
+.openLine{
+  position: absolute;
+  width: 100vw;
+  height: 0.5vh;
+  top: 57vh;
+  background-color: white;
+  transition: 0.8s;
+  left:-100vw;
+  z-index: 6;
+}
+
+.topBlock{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 0;
+  background-color: black;
+  z-index: 5;
+  transition: 1s;
+}
+
+.bottomBlock{
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 50vh;
+  background-color:black;
+  z-index: 5;
+  transition: 1s;
+}
+
+
+
+
+.me02{
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  top: 15vw;
+  left: 10vw;
+  border: 5px black solid;
+  box-shadow: 5px 5px 5px gray;
+  border-radius: 8%;
+  z-index: -2;
+}
+
+.introduction{
+  position: absolute;
+  width: 50vw;
+  height: 45vw;
+  top: 15vw;
+  left: 45vw;
+}
+
+.p1{
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  border: 3px orange solid; 
+}
+
+.span1{
+  font-size: 5vw;
+  font-family: 'Didact Gothic';
+  padding-left: 5%;
+}
+
+.span2{
+  font-size: 1vw;
+  color: #696969;
+  font-family: 'Didact Gothic';
+  padding-left: 10%;
+}
+
+.span3{
+  font-size: 4vw;
+  font-family: 'Didact Gothic';
+  padding-left: 45%;
+}
+
+.span4{
+  font-size: 1vw;
+  color: #696969;
+  font-family: 'Didact Gothic';
+  padding-left: 55%;
+}
+
+.p2{
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  border: 3px orange solid;
+  top: 10vw;
+  font-size: 2vw;
+}
+
+/* dice css */
+
+.tray {
+  position: relative;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center; 
+  z-index: 10;
+}
+
+/* @media
+(orientation: portrait) {
+  .tray {
+    flex-direction:column;
+  } 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  .tray {
+    transform:scale(50%);
+    transform-origin: top left;
+    width:200%;
+    height:200%;
+  }
+} */
+
+.die{
+  position: absolute;
+  top: 40vh;
+  transition: 0.5s;
+}
+
+.die:hover{
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+
+
+/* gradient-border css */
+.gradient-border {
+  --border-width: 9px;
+  position: absolute;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 38vw;
+  font-family: Lato, sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);
+}
+
+.gradient-border::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(
+    60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+
+
+
+
+.container {
+  width: 100%;
+  width: 45vw;
+  height: 12.5vw;
+  position: absolute;
+  top: 40vw;
+  left: 47vw;
+  overflow: hidden;
+  background-color: #222;
+  display: none;
+}
+
+.slide-bar {
+  position: absolute;
+  left: 6vw;
+  transform: translateY(-50%) rotateZ(15deg);
+  width: 1vw;
+  height: 1vh;
+  z-index: 4;
+}
+
+.bar {
+  position: absolute;
+  width: 0.6vw;
+  height: 6.5vw;
+  top: -6vw;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.text-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #222;
+}
+
+.text-block h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 500;
+  font-style: italic;
+  /* letter-spacing: 2px; */
+  position: relative;
+  color: white;
+}
+
+
+#textone {
+  z-index: 3;
+  clip-path: polygon(0 0, 18% 0, 8% 100%, 0% 100%);
+}
+#texttwo {
+  z-index: 2;
+  clip-path: polygon(0 0, 91% 0, 81% 100%, 0% 100%);
+}

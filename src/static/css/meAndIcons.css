@@ -1,0 +1,333 @@
+.me_01{
+  height: auto;
+  width: 33.3%;
+  position: absolute;
+  top: 20vh;
+  right: 10vw;
+}
+
+.javaCss{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 40vw;
+  opacity: 0;
+}
+
+@keyframes show-up{
+  0%{
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.javaCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 40vw;
+  animation: show-up 1.5s;
+}
+
+
+.mysqlCss{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 33vw;
+  opacity: 0;
+}
+
+.mysqlCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 33vw;
+  animation: show-up-delay 2s;
+}
+
+@keyframes show-up-delay{
+  0%{
+    opacity: 0;
+    
+  }
+  25%{
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reactCss{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 5vh;
+  right: 24vw;
+  opacity: 0;
+}
+
+.reactCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 5vh;
+  right: 24vw;
+  animation: show-up-delay 2.5s;
+}
+
+.githubCss{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 15vw;
+  opacity: 0;
+}
+
+.githubCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  right: 15vw;
+  animation: show-up-delay 3s;
+}
+
+.cssCss{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 7vw;
+  opacity: 0;
+}
+
+.cssCss-active{
+  width: 5%;
+  height: auto;
+  position: absolute;
+  top: 25vh;
+  right: 7vw;
+  animation: show-up-delay 3.5s;
+}
+
+.pre-text{
+  position:absolute;
+  font-size: 4.5vw;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  top: 35vh;
+  left: 8vw;
+  cursor: default;
+}
+
+.auto-text{
+  position:relative;
+  font-size: 4.5vw;
+  font-weight: bold;
+  font-family: Comic Sans MS;
+  top: 50vh;
+  left: 8vw;
+  cursor: default;
+}
+
+/* customize the defined css*/
+.typed-cursor {
+  position:relative;
+  font-size: 5vw;
+  top: 50vh;
+  left: 8vw;
+}
+
+.pre-auto-text{
+  position:absolute;
+  font-size: 8vw;
+  font-weight: bold;
+  font-family: Arial Black;
+  top: 15vh;
+  left: 6.5vw;
+  cursor: default;
+}
+
+.post-auto-text{
+  position:relative;
+  font-size: 8vw;
+  font-weight: bold;
+  font-family: Arial Black;
+  top: 55vh;
+  left: 47.5vw;
+  cursor: default;
+}
+
+
+.pre-text {
+	position: absolute;
+}
+
+.pre-text:before {
+	position: absolute;
+	content: '';
+	z-index: -1;
+	top: -2px;
+	left: -5px;
+	right: -5px;
+	bottom: -2px;
+	background-color: #7eec99;
+	transform-origin: 0;
+	transition: transform 3s ease;
+	transform: scaleX(0);
+}
+
+.in-view .pre-text:before {
+	transform: scaleX(1);
+}
+
+
+.meAndIconsDiv{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 适配手机屏幕 */
+@media screen and (max-width:500px) {
+  .me_01{
+    height: auto;
+    width: 44%;
+    position: absolute;
+    top: 20vh;
+    right: 7vw;
+  }
+  
+  .javaCss{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 20vh;
+    right: 45vw;
+  }
+  
+  .mysqlCss{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 17vh;
+    right: 36vw;
+  }
+  
+  .reactCss{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 13vh;
+    right: 26vw;
+  }
+  
+  .githubCss{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 17vh;
+    right: 15vw;
+  }
+  
+  .css3Css{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 21vh;
+    right: 7vw;
+  }
+  
+  .pre-text{
+    position:absolute;
+    font-size: 4.5vw;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+    top: 23vh;
+    left: 8vw;
+    cursor: default;
+  }
+  
+  .auto-text{
+    position:relative;
+    font-size: 4.5vw;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+    top: 23vh;
+    left: 8vw;
+    cursor: default;
+  }
+  
+  /* customize the defined css*/
+  .typed-cursor {
+    position:relative;
+    font-size: 5vw;
+    top: 23vh;
+    left: 8vw;
+  }
+  
+  .pre-auto-text{
+    position:absolute;
+    font-size: 8vw;
+    font-weight: bold;
+    font-family: Arial Black;
+    top: 14vh;
+    left: 6.5vw;
+    cursor: default;
+  }
+  
+  .post-auto-text{
+    position:relative;
+    font-size: 8vw;
+    font-weight: bold;
+    font-family: Arial Black;
+    top: 29vh;
+    left: 47.5vw;
+    cursor: default;
+  }
+  
+  
+  .pre-text {
+    position: absolute;
+  }
+  
+  .pre-text:before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: -2px;
+    left: -5px;
+    right: -5px;
+    bottom: -2px;
+    background-color: #7eec99;
+    transform-origin: 0;
+    transition: transform 3s ease;
+    transform: scaleX(0);
+  }
+  
+  .in-view .pre-text:before {
+    transform: scaleX(1);
+  }
+  
+  
+  .meAndIconsDiv{
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+  }
+
+
+}

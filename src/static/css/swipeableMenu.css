@@ -1,0 +1,16 @@
+.menu{
+  cursor: pointer;
+  background-color: inherit;
+  border: 0px;
+  color: none;
+  position: absolute;
+  right: 7vw;
+  top: 8vh;
+}
+
+/* 适配手机屏幕 */
+@media screen and (min-width:720px) {
+  .menu{
+    display: none;
+  }
+}

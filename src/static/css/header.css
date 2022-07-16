@@ -1,0 +1,95 @@
+.headerDiv{
+    position: fixed;
+    width: 100vw;
+    height: 20vh;
+    top: 0vh;
+    z-index: 100;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.avatar{
+    position: absolute;
+    width: 6vw;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    top: 6vh;
+    bottom: 0;
+    left: 20vw;
+    transition: 0.5s;
+}
+
+.avatar:hover{
+    cursor: pointer;
+}
+
+
+
+.tabBox{
+    width: 50vw;
+    height: auto;
+    position: absolute;
+    top: 10vh;
+    left: 35vw;
+    transition: 0.5s;
+}
+
+.wordBox{
+    width: 7vw;
+    position: absolute;
+    top: 9vh;
+    left: 30vw;
+    font-size: 2vw;
+    transition: 0.5s;
+}
+
+.wordBox-fadeOut{
+    width: 7vw;
+    position: absolute;
+    top: 9vh;
+    left: 30vw;
+    font-size: 2vw;
+    transition: 0.5s;
+    animation: fadeout-anim 2s linear forwards;
+}
+
+@keyframes fadeout-anim {
+	100% {
+		opacity: 0;
+	}
+}
+
+
+@media screen and (max-width:720px) {
+    .tabBox{
+        display: none;
+    }
+
+    .avatar{
+        width: 120%;
+        height: 120%;
+        border-radius: 50%;
+        position: relative;
+        top: 6vh;
+        left: -7vw;
+    }
+
+    .wordBox{
+        width: 12vw;
+        position: relative;
+        top: 7vh;
+        font-size: 3vw;
+        padding-left: 0vw;
+    }
+    
+    .wordBox-fadeOut{
+        width: 12vw;
+        position: relative;
+        top: 7vh;
+        font-size: 3vw;
+        padding-left: 0vw;
+        animation: fadeout-anim 2s linear forwards;
+    }
+}
+
