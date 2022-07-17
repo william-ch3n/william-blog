@@ -1,6 +1,7 @@
 import { Navigate } from "react-router-dom";
 import About from "../../pages/About/About";
 import Home from "../../pages/Home/Home";
+import Album from "../../pages/Album/Album";
 
 export default [
     {
@@ -11,6 +12,11 @@ export default [
     {
         path: '/about',
         element: <About />,
+        children: []
+    },
+    {
+        path: '/album',
+        element: <Album />,
         children: []
     },
     {
