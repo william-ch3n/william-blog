@@ -165,7 +165,7 @@ export default function Portfolio() {
               The technologies were not really fancy though, it would be used to process <span className="highlight">millions of data</span> daily or periodly as the backbone of the bussiness on backstage.
               <br />
               <br />
-              It helps me to establish systematic knowledge of <span className="highlight">Database and SQL</span> skill set, as well as high communication abilities while working with Japanese clients, co-operate with Philippino and Chinese teammates. 
+              It helps me establish systematic knowledge of <span className="highlight">Database and SQL</span> skill sets, as well as high communication abilities while working with Japanese clients, co-operating with Philippino and Chinese teammates. 
               <br />
               <br />
               It's an awesome starter in my career, meanwhile it kept inspiring me with the beauty of CREATION and DEVELOPMENT!
@@ -243,6 +243,9 @@ export default function Portfolio() {
                 <br />
                 <br />
                 To me, that's great chanllenge and <span className="highlight2">great opportunity</span> at the same time!
+                <br />
+                <br />
+                Swiftly I grew up from a rookie developer to a full-stack engineer!
               </p>
             </div>
             {/* <Footer /> */}
