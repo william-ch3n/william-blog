@@ -1,0 +1,10 @@
+.photosDiv{
+  position: relative;
+  width: 100vw;
+  height: 60vw;
+  /* border: 3px black solid; */
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
