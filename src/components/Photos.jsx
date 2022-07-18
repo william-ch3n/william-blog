@@ -1,14 +1,32 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useRef } from 'react'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import '../static/css/photos.css'
 
 export default function Photos() {
 
-  useEffect(()=>{
-    
-  },[]);
-  
+  const photoRef = useRef();
+  const photoModal = useRef();
+
+  useEffect(() => {
+
+  }, []);
+
+  const clickPhoto = (imgSrc) => {
+    photoModal.current.style.display = "block";
+    photoRef.current.src = imgSrc;
+  }
+
+  const closePhoto = () => {
+    photoModal.current.style.display = "none";
+  }
+
+  window.onclick = (event) => {
+    if (event.target.className === "modal") {
+	    closePhoto();
+	  }
+  }  
+
 
   const itemData = [
     {
@@ -75,15 +93,24 @@ export default function Photos() {
 
   return (
     <Fragment>
+      <div className="modal" ref={photoModal}>
+        <div className="modal-content">
+          <span className="close" onClick={closePhoto}>&times;</span>
+          <img src="" className="photoView" ref={photoRef}/>
+        </div>
+      </div>
+
       <div className="photosDiv">
         <ImageList sx={{ width: "80vw", height: "60vw" }} variant="woven" cols={3} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
               <img
-                src={`${item.img}`}
-                srcSet={`${item.img}`}
+                src={item.img}
+                srcSet={item.img}
                 alt={item.title}
                 loading="lazy"
+                onClick={() => clickPhoto(item.img)}
+                className="photo"
               />
             </ImageListItem>
           ))}
