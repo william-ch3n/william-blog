@@ -52,7 +52,6 @@ export default function Header() {
 	const handleChange = (event, newValue) => {
 		setIndex(newValue);
 		dispatch(actionStoreTabValue(newValue));
-		console.log("checkindex:", newValue);
 	}
 
 	const onClick = () => {

@@ -4,8 +4,12 @@ import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import { useDispatch } from 'react-redux';
+import { actionStoreMainTag } from '../common/redux/actions/notesAction';
 
 export default function NoteSideBarRight() {
+
+  const dispatch = useDispatch();
 
   const topicList = [
     {topicId:1, topicName:"java"},
@@ -23,6 +27,11 @@ export default function NoteSideBarRight() {
     {topicId:13, topicName:"tweet"},
   ];
 
+  const selectMainTag = (event) => {
+    console.log(event.target.innerText);
+    dispatch(actionStoreMainTag(event.target.innerText));
+  }
+
   return (
     <Fragment>
       <div className="noteSideBarRightDiv">
@@ -31,7 +40,6 @@ export default function NoteSideBarRight() {
             <Paper
               component="form"
               sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: "20vw", border:"1px solid rgb(224,224,224)", borderRadius: 30, boxShadow:"none" }}
-              // elevation={1}
             >
               <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
                 <SearchIcon />
@@ -74,7 +82,7 @@ export default function NoteSideBarRight() {
           <div className="topics">
             {topicList.map(
               (topic) => {
-                return <button key={topic.topicId} className="topicButton">{topic.topicName}</button>
+                return <button key={topic.topicId} className="topicButton" onClick={event => selectMainTag(event)}>{topic.topicName}</button>
               }
             )}
           </div>

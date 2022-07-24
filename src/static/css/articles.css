@@ -1,0 +1,148 @@
+.articlesDiv{
+  position: relative;
+  width: 57vw;
+  min-height: 80vh;
+  padding-top: 20vh;
+  margin-left: 15vw;
+}
+
+.topic{
+  font-size: 3vw;
+  font-weight: bold;
+  padding-left: 10%;
+  padding-top: 1%;
+}
+
+.sub-topic{
+  margin-left: 15%;
+  margin-top: 1%;
+}
+
+.sub-topic-button.active{
+  background-color: #66CDAA;
+}
+
+.sub-topic-button{
+  position: relative;
+  border: none;
+  font-size: 0.8vw;
+  border-radius: 25px;
+  background-color: rgb(239, 239, 239);
+  padding-left: 0.9vw;
+  padding-right: 0.9vw;
+  padding-top: 0.4vw;
+  padding-bottom: 0.4vw;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 0.5vw;
+}
+
+.sub-topic-button:hover{
+  background-color: #66CDAA;
+}
+
+.filter{
+ position: relative;
+ padding-left: 80%;
+ padding-top: 3%;
+}
+
+.filter-tab{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  cursor: pointer;
+  color: gray;
+  transition: 0.2s;
+}
+
+.filter-tab.active{
+  border-bottom: 3px black solid;
+  color: black;
+  z-index: 100;
+}
+
+
+.article{
+  position: relative;
+  width: 50vw;
+  height: 23vh;
+  border-top: 1px solid rgb(239, 239, 239);
+  margin-top: 1%;
+  margin-left: 6%;
+  z-index: 2;
+  margin-bottom: 3%;
+}
+
+.articleTitle{
+  position: relative;
+  width: 35vw;
+  height: auto;
+  font-size: 1.5vw; 
+  font-weight: 800;
+  padding-top: 3%;
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+.articleBody{
+  position: relative;
+  width: 35vw;
+  height: auto;  
+  padding-top: 2%;
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+.articleTags{
+  position: relative;
+  display: flex;
+  float: left;
+  margin-top: 4%;
+  margin-left: 3%;
+}
+
+.articleTag{
+  position: relative;
+  border: none;
+  font-size: 0.8vw;
+  border-radius: 25px;
+  background-color: rgb(239, 239, 239);
+  padding-left: 0.6vw;
+  padding-right: 0.6vw;
+  padding-top: 0.2vw;
+  padding-bottom: 0.2vw;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 10%;
+  
+}
+
+.commentsAndLikes{
+  position: relative;
+  display: flex;
+  float: right;
+  width: 15vw;
+  height: auto;
+  margin-top: 3.5%;
+  margin-right: 10%;
+  align-items: center;
+  font-size: 0.75vw;
+}
+
+.commentsAndLikesNumber{
+  padding-left: 1%;
+  padding-right: 5%;
+}
+
+.articleImg{
+  position: relative;
+  display: flex;
+  float: right;
+  width: 7vw;
+  height: 7vw;
+  margin-top: -10.5%;
+  left: 35%;
+  cursor: pointer;
+}
+

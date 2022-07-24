@@ -43,3 +43,7 @@ export const MENU_TABS = {
     2 : "album",
     3 : "about"
 }
+
+export const NOTES_ACTIONS = {
+    STORE_MAIN_TAG: "STORE_MAIN_TAG"
+}
